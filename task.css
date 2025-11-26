@@ -1,0 +1,123 @@
+#menu1{
+    position: relative; /* меню будет позиционироваться полносьбю страницы*/
+    display: block; /* превращает элемент в блочный, занимает всб ширину */
+    width: 100%; /* меню растягивается по всей ширине окна */
+    background-color: #222; 
+    font-family: Arial, sans-serif; /* шрифт для текста в меню*/
+    z-index: 10; /* чтобы меню было поверх других элементов */
+}
+
+#menu1 ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu1 > ul > li{
+    display: inline-block; /* делает элементы списка расположенными в одну линию (горизонтально) */
+    position: relative; /* чтобы внутри этого элемента можно было точно позиционировать */
+}
+
+#menu1 ul li a{
+    display: block; /* превращает ссылку в блочный элемент(можно задать отступы и тд) */
+    padding: 12px 20px; /* внутренние отступы сверху снизу и по бокам*/
+    color: white; 
+    text-decoration: none; /* убирает подчеркивание ссылок */
+    transition: background 0.3s; /* плавный переход цвета при наведении */
+}
+
+#menu1 ul li a:hover{
+    background-color: #444;
+}
+
+#menu1 ul ul{
+    display: none; /* подменю изначально скрыто */
+    position: absolute; /* позиционируем относительно родительского пункта */
+    top: 100%; /* подменю появляется сращу под основным пунктом */
+    left: 0; /* выравнивание по левому краю */
+    background-color: #333; 
+    min-width: 180%; /* минимальная ширина подменю */
+    padding: 0; /* убирает навигационные отступы */
+}
+
+#menu1 ul ul li{
+    display: block; /* элементы подменю идут вертикально */
+}
+
+#menu1 ul li:hover > ul{
+    display: block; /* выводит элементы подменю вертикально */
+}
+
+#menu1 ul ul li a:hover{
+    background-color: #555; 
+}
+
+.body{
+    margin: 0;
+    padding: 0;
+    background-color: #eef2f5; /* мягкий светло-серо-голубой фон */
+}
+
+/* Заголовки */
+h1, h2, h3, h4, h5{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 700;
+    color: #2d4b73; /* спокойный глубокий синий */
+}
+
+/* Основной текст */
+p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #333; /* мягкий тёмно-графитовый */
+}
+
+/* Контейнеры текста */
+.p-text {
+    width: 60%;
+    margin: 25px auto;
+    text-align: center; 
+    border: 2px solid #c7d0d9; /* мягкая серая рамка */
+    background-color: #f8fafc; /* очень светлый спокойный фон */
+    padding: 15px 20px;
+    border-radius: 10px; /* лёгкое скругление */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* мягкая тень */
+}
+
+.p-text p{
+    margin: 0;
+    color: #334155; /* приятный серо-синий */
+}
+
+/* Заголовки команд */
+#redbull {
+    color: #385dad; /* спокойный синий */
+}
+
+#mercedes {
+    color: #2d4747; /* мягкий глубокий бирюзово-серый */
+}
+
+/* Картинки карусели */
+#carousele img{
+    height: 720px;
+    width: 1280px;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    width: 70%;
+    margin: 40px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #dce3e9; /* мягкий спокойный фон */
+    border-top: 2px solid #b6c3cf;
+}
+
+#footer-div h3 {
+    color: #2d4b73;
+}
